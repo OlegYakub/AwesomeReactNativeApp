@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import {
-  Text,
   View,
 } from 'react-native';
+import TodoView from './TodoView';
+
+
 
 class TodoContainer extends Component{
 
   render() {
     return (
       <View>
-        <Text>
-          It Is TodoContainer
-        </Text>
+        <TodoView/>
       </View>
     )
   }

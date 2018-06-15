@@ -1,4 +1,14 @@
+import React from 'react';
 import { AppRegistry } from 'react-native';
-import App from './App';
+import configureStore from './src/store/configureStore'
+import App from './src/components/app/App';
 
-AppRegistry.registerComponent('AwesomeProject', () => App);
+const Root = () => {
+  const store = configureStore();
+
+  return (
+    <App store={store} />
+  );
+};
+
+AppRegistry.registerComponent('AwesomeProject', () => Root);
