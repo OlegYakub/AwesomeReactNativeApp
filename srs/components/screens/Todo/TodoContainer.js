@@ -10,7 +10,7 @@ class TodoContainer extends Component{
     return (
       <View>
         <Text>
-          TodoContainer
+          It Is TodoContainer
         </Text>
       </View>
     )
