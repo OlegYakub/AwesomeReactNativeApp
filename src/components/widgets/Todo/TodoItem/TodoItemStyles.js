@@ -8,17 +8,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    flexWrap: 'nowrap'
   },
   itemText: {
     color: '#fff',
     fontSize: 18,
-
+  },
+  itemTextCompleted: {
+    textDecorationLine: 'line-through'
+  },
+  itemContent: {
+    width: 100,
+    flexGrow: 1,
   },
   controls: {
+    alignItems: 'center',
+    width: 50,
     flexShrink: 0,
-    width: 200
-  }
+    flexDirection: 'row',
+  },
+  controlItem: {
+    width: 24
+  },
+
 });
 
 export default styles;

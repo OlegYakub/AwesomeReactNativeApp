@@ -6,7 +6,7 @@ import {
 
 import { connect } from 'react-redux';
 import TodoItemView from './TodoItemView'
-import { removeTodo } from "../../../../store/Todo/todoActions";
+import { removeTodo, toggleComplete } from '../../../../store/Todo/todoActions';
 
 class TodoItemContainer extends Component{
 
@@ -14,13 +14,21 @@ class TodoItemContainer extends Component{
     this.props.dispatch(removeTodo(+this.props.index))
   };
 
-  render() {
-    //console.log('item', this.props);
+  handleToggleComplete = () => {
+    this.props.dispatch(toggleComplete(+this.props.index))
+  };
 
+  render() {
     let name = this.props.name;
+    let completed = this.props.completed;
     return (
       <View>
-        <TodoItemView name={name} removeTodo={this.handleRemove}/>
+        <TodoItemView
+          name={name}
+          completed={completed}
+          removeTodo={this.handleRemove}
+          toggleComplete={this.handleToggleComplete}
+        />
       </View>
     )
   }

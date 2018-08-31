@@ -8,6 +8,14 @@ import TodoView from './TodoView';
 
 class TodoContainer extends Component{
 
+  static navigationOptions = {
+    headerTitle: 'Todo',
+    headerStyle: {
+      backgroundColor: '#fff'
+    },
+    headerTintColor: '#2f8b8c'
+  };
+
   render() {
     return (
       <View>

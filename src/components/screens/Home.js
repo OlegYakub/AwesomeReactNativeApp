@@ -21,11 +21,10 @@ class Home extends Component {
   constructor(props) {
     super(props);
 
-  }
+  };
 
-  static navigationOption = {
-    title: 'Welcome',
-    header: null,
+  static navigationOptions = {
+    title: 'Home',
   };
 
   navigateTo = (screenName) => {

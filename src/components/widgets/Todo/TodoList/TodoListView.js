@@ -1,20 +1,23 @@
-
 import React from 'react';
 import {
   View,
   FlatList,
 } from 'react-native';
 import TodoItemContainer from '../TodoItem/TodoItemContainer'
+import CreateTodoContainer from '../CreateTodo/CreateTodoContainer'
+import EmptyTodoList from './EmptyTodoList'
 
 const TodoListView = ({
-  list
+                        list
                       }) => {
-
   return (
     <View>
+      <CreateTodoContainer/>
       <FlatList
         data={list}
-        renderItem={({item}) => <TodoItemContainer name={item.name} index={list.indexOf(item)}/>}
+        ListEmptyComponent={EmptyTodoList}
+        renderItem={({item}) => <TodoItemContainer name={item.name} completed={item.completed}
+                                                   index={list.indexOf(item)}/>}
       />
     </View>
   )

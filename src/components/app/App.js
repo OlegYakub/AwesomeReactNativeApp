@@ -5,9 +5,9 @@ import AppNavigation from '../../navigation/navConfig';
 class App extends Component {
   render() {
     return (
-      <Provider store={this.props.store}>
-        <AppNavigation />
-      </Provider>
+        <Provider store={this.props.store}>
+          <AppNavigation />
+        </Provider>
     )
   }
 }
